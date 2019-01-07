@@ -12,6 +12,8 @@ class Fincher < Formula
   bottle do
     root_url "https://github.com/maxfierke/fincher/releases/download/0.1.0"
     cellar :any
+    sha256 "4f0c9bf837904c799f4e79b026ee18a0420c704e43444187d200516698223768" => :sierra
+    sha256 "758561508cfa6b3ade85f7c1a9403a9f685ef80e5f22b3595ec5ebf232a72b8f" => :high_sierra
     sha256 "c0b8621d1c9925cad16c5bd231a2ce87907baa85530e52396e7e9d081f127b6d" => :mojave
   end
 
