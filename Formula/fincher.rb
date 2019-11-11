@@ -8,10 +8,11 @@ class Fincher < Formula
   depends_on "libevent"
   depends_on "libyaml"
 
-  # bottle do
-  #   root_url "https://github.com/maxfierke/fincher/releases/download/0.1.1"
-  #   cellar :any
-  # end
+  bottle do
+    root_url "https://github.com/maxfierke/fincher/releases/download/0.1.1"
+    cellar :any
+    sha256 "7ea8c633e58ccb9b2b091bb2be383dc3f04c78387e385f8952d31e14c7b7c652" => :catalina
+  end
 
   def install
     system "make", "install", "PREFIX=#{prefix}", "RELEASE=1"
