@@ -3,7 +3,6 @@ class Fincher < Formula
   homepage "https://github.com/maxfierke/fincher"
   url "https://github.com/maxfierke/fincher/archive/0.1.1.tar.gz"
   sha256 "c29be72f7b1eeefb1aad9425a42e159cfef908d96d6f624dfdfa2f074fb2c471"
-  rebuild 1
 
   depends_on "crystal" => :build
   depends_on "libevent"
