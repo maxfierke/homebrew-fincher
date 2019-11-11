@@ -1,21 +1,18 @@
 class Fincher < Formula
   desc "Steganography tool for text"
   homepage "https://github.com/maxfierke/fincher"
-  url "https://github.com/maxfierke/fincher/archive/0.1.0.tar.gz"
-  sha256 "8bb0883a57f06d43edf776f9252a5d1614d3b58a464052d34d61e2eafb0cec22"
+  url "https://github.com/maxfierke/fincher/archive/0.1.1.tar.gz"
+  sha256 "c29be72f7b1eeefb1aad9425a42e159cfef908d96d6f624dfdfa2f074fb2c471"
 
   depends_on "crystal" => :build
   depends_on "bdw-gc"
   depends_on "libevent"
   depends_on "libyaml"
 
-  bottle do
-    root_url "https://github.com/maxfierke/fincher/releases/download/0.1.0"
-    cellar :any
-    sha256 "4f0c9bf837904c799f4e79b026ee18a0420c704e43444187d200516698223768" => :sierra
-    sha256 "758561508cfa6b3ade85f7c1a9403a9f685ef80e5f22b3595ec5ebf232a72b8f" => :high_sierra
-    sha256 "c0b8621d1c9925cad16c5bd231a2ce87907baa85530e52396e7e9d081f127b6d" => :mojave
-  end
+  # bottle do
+  #   root_url "https://github.com/maxfierke/fincher/releases/download/0.1.1"
+  #   cellar :any
+  # end
 
   def install
     system "make", "install", "PREFIX=#{prefix}", "RELEASE=1"
