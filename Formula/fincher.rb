@@ -4,15 +4,14 @@ class Fincher < Formula
   url "https://github.com/maxfierke/fincher/archive/0.1.1.tar.gz"
   sha256 "c29be72f7b1eeefb1aad9425a42e159cfef908d96d6f624dfdfa2f074fb2c471"
 
+  bottle do
+    root_url "https://github.com/maxfierke/fincher/releases/download/0.1.1"
+    sha256 cellar: :any, catalina: "7ea8c633e58ccb9b2b091bb2be383dc3f04c78387e385f8952d31e14c7b7c652"
+  end
+
   depends_on "crystal" => :build
   depends_on "libevent"
   depends_on "libyaml"
-
-  bottle do
-    root_url "https://github.com/maxfierke/fincher/releases/download/0.1.1"
-    cellar :any
-    sha256 "7ea8c633e58ccb9b2b091bb2be383dc3f04c78387e385f8952d31e14c7b7c652" => :catalina
-  end
 
   def install
     system "make", "install", "PREFIX=#{prefix}", "RELEASE=1"
