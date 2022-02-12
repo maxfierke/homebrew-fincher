@@ -9,9 +9,12 @@ class Fincher < Formula
     sha256 cellar: :any, catalina: "7ea8c633e58ccb9b2b091bb2be383dc3f04c78387e385f8952d31e14c7b7c652"
   end
 
+  depends_on "bdw-gc"
   depends_on "crystal" => :build
   depends_on "libevent"
   depends_on "libyaml"
+  depends_on "pcre"
+  depends_on "zlib"
 
   def install
     system "make", "install", "PREFIX=#{prefix}", "RELEASE=1"
