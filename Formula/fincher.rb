@@ -21,8 +21,6 @@ class Fincher < Formula
   end
 
   test do
-    system "#{bin}/fincher", "encode"
-
     src_text = "There are few places with more iconic rock structures than " \
                "the American Southwest with the red rocks and glacier-formed " \
                "peaks. I made this up. Who knows. However, there is maybe some " \
