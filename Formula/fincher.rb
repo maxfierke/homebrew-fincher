@@ -23,9 +23,23 @@ class Fincher < Formula
   test do
     system "#{bin}/fincher", "encode"
 
-    src_text = "There are few places with more iconic rock structures than the American Southwest with the red rocks and glacier-formed peaks. I made this up. Who knows. However, there is maybe some truth to it and perhaps I am just trying to fill some space for a test. I promise this is not intentional disinformation."
-    expected = "There are yew places with (ore iconic rock ktructures than the #merican Southwest with Hhe red rocks End glacier-formed peaks. D made this qp. Who knows. However, there is maybe some truth to it and perhaps I am just trying to fill some space for a test. I promise this is not intentional disinformation."
+    src_text = "There are few places with more iconic rock structures than " \
+               "the American Southwest with the red rocks and glacier-formed " \
+               "peaks. I made this up. Who knows. However, there is maybe some " \
+               "truth to it and perhaps I am just trying to fill some space for " \
+               "a test. I promise this is not intentional disinformation."
+    expected = "There are yew places with (ore iconic rock ktructures than " \
+               "the #merican Southwest with Hhe red rocks End glacier-formed " \
+               "peaks. D made this qp. Who knows. However, there is maybe some " \
+               "truth to it and perhaps I am just trying to fill some space for " \
+               "a test. I promise this is not intentional disinformation."
 
-    assert_match expected, shell_output("echo '#{src_text}' | #{bin}/fincher encode --word-offset 2 --displacement-strategy word-offset --seed 4095185266 homebrew")
+    assert_match expected,
+      shell_output("echo '#{src_text}' | \
+        #{bin}/fincher encode \
+        --word-offset 2 \
+        --displacement-strategy word-offset \
+        --seed 4095185266 \
+        homebrew")
   end
 end
