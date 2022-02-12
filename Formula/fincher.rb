@@ -1,8 +1,8 @@
 class Fincher < Formula
   desc "Steganography tool for text"
   homepage "https://github.com/maxfierke/fincher"
-  url "https://github.com/maxfierke/fincher/archive/0.1.1.tar.gz"
-  sha256 "c29be72f7b1eeefb1aad9425a42e159cfef908d96d6f624dfdfa2f074fb2c471"
+  url "https://github.com/maxfierke/fincher/archive/0.2.0.tar.gz"
+  sha256 "e4aa58b688b4c63281a0cddaef8e6febcb3cf089f0e5516dcd943b7a8483bf18"
 
   bottle do
     root_url "https://github.com/maxfierke/fincher/releases/download/0.1.1"
@@ -18,15 +18,6 @@ class Fincher < Formula
   end
 
   test do
-    # `test do` will create, run in and delete a temporary directory.
-    #
-    # This test will fail and we won't accept that! For Homebrew/homebrew-core
-    # this will need to be a test that verifies the functionality of the
-    # software. Run the test with `brew test fincher`. Options passed
-    # to `brew install` such as `--HEAD` also need to be provided to `brew test`.
-    #
-    # The installed folder is not in the path, so use the entire path to any
-    # executables being tested: `system "#{bin}/program", "do", "something"`.
     system "#{bin}/fincher", "encode"
   end
 end
