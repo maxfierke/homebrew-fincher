@@ -5,10 +5,9 @@ class Fincher < Formula
   sha256 "4eb490f72b576ac96eeef6a85235773df272c39cd5d44ab52172bab6f4be0756"
 
   bottle do
-    root_url "https://github.com/maxfierke/homebrew-fincher/releases/download/fincher-0.2.0"
-    rebuild 1
-    sha256 cellar: :any,                 big_sur:      "3f18b02339438283f1308a0d4cd2901e3fc1b229cc68a98632a1f6eae346f6c1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "70e003512acdfc624fccc11f641854e2783bbf04e3e7a217815f371d28339e2d"
+    root_url "https://github.com/maxfierke/homebrew-fincher/releases/download/fincher-0.2.1"
+    sha256 cellar: :any,                 monterey:     "b0752cde5110120d67ee393bd313ca1590aa954b3767131bc5a46142c4b26a72"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "92737f42fbff311f9bc7508d724ba2f8711a950baa74b9010dec99206493326a"
   end
 
   depends_on "crystal" => :build
