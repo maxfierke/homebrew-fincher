@@ -1,8 +1,8 @@
 class Fincher < Formula
   desc "Steganography tool for text"
   homepage "https://github.com/maxfierke/fincher"
-  url "https://github.com/maxfierke/fincher/archive/refs/tags/0.3.0.tar.gz"
-  sha256 "89481ad614e137554d59608e8a6cc97148afaaa49aec29b9d2b9c5202832bdaf"
+  url "https://github.com/maxfierke/fincher/archive/refs/tags/0.3.1.tar.gz"
+  sha256 "962c0efca8ebe7db1b8420b2c6309589429e2415d5d06dacb49e9f00c3286b0c"
 
   bottle do
     root_url "https://github.com/maxfierke/homebrew-fincher/releases/download/fincher-0.2.1"
