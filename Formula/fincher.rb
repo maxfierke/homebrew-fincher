@@ -1,8 +1,8 @@
 class Fincher < Formula
   desc "Steganography tool for text"
   homepage "https://github.com/maxfierke/fincher"
-  url "https://github.com/maxfierke/fincher/archive/0.2.1.tar.gz"
-  sha256 "4eb490f72b576ac96eeef6a85235773df272c39cd5d44ab52172bab6f4be0756"
+  url "https://github.com/maxfierke/fincher/archive/0.3.0.tar.gz"
+  sha256 "89481ad614e137554d59608e8a6cc97148afaaa49aec29b9d2b9c5202832bdaf"
 
   bottle do
     root_url "https://github.com/maxfierke/homebrew-fincher/releases/download/fincher-0.2.1"
@@ -12,9 +12,8 @@ class Fincher < Formula
 
   depends_on "crystal" => :build
   depends_on "bdw-gc"
-  depends_on "libevent"
   depends_on "libyaml"
-  depends_on "pcre"
+  depends_on "pcre2"
   depends_on "zlib"
 
   def install
